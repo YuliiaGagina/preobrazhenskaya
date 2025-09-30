@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Header — photo layout</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="top-accent" aria-hidden="true"></div>
+
+  <header class="header" role="banner">
+    <div class="container header__row">
+      <div class="header__grid">
+        
+        <!-- Бренд-блок: фото + локация -->
+        <div class="brand">
+            <div class="header__location caps">Odesa, Ukraine</div>
+          <div class="header__photo">
+            <img src="./images/header-photo.png" alt="Фотография шапки">
+          </div>
+        
+        </div>
+
+        <div class="write-header-part">
+               <div class="header__controls">
+          <div class="lang " aria-label="Выбор языка">
+            <a href="#" class="is-active" lang="ru">RU</a>
+            <a href="#" lang="en">EN</a>
+            <a href="#" lang="uk">UA</a>
+          </div>
+
+        <!-- Навигация (десктоп) -->
+        <nav class="nav" aria-label="Главное меню">
+          <a href="#portfolio" class="caps">Портфолио</a>
+          <a href="#about" class="caps">Обо мне</a>
+          <a href="#terms" class="caps">Условия</a>
+          <a href="#contacts" class="caps">Контакты</a>
+        </nav>
+        </div>
+    
+
+        <!-- Языки + бургер -->
+      
+          <button class="burger" id="burger" aria-label="Открыть меню" aria-haspopup="dialog" aria-controls="mobileMenu">
+            <span class="burger__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="current" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="12" y="20" width="40" height="1" rx="1"></rect>
+                <rect x="25" y="31" width="27" height="1" rx="1"></rect>
+                <rect x="18" y="42" width="34" height="1" rx="1"></rect>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== OVERLAY (mobile menu) ====== -->
+  <div class="overlay" id="mobileMenu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Мобильное меню">
+    <button class="overlay__close" type="button" aria-label="Закрыть меню"></button>
+
+    <div class="overlay__panel">
+      <a href="#home" class="caps">Главная</a>
+      <a href="#about2" class="caps">Обо мне</a>
+      <a href="#portfolio" class="caps">Портфолио</a>
+      <a href="#prints" class="caps">Принты</a>
+      <a href="#certificate" class="caps">Сертификат</a>
+    </div>
+
+    <div class="overlay__social">
+      <a href="https://www.instagram.com/pryobrazhenskaya?igsh=MWZkcnlpYXU4eHZqaw==" aria-label="Instagram"> <svg class="inst" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.612903" y="0.612903" width="36.7742" height="36.7742" rx="9.19355" stroke="current" stroke-width="1.22581"/>
+<circle cx="19.0004" cy="18.9999" r="9.80645" stroke="current" stroke-width="1.22581"/>
+<circle cx="30.0323" cy="7.96784" r="2.45161" stroke="currwnt" stroke-width="1.22581"/>
+</svg></a>
+      <a href="https://t.me/pryobrazhenskaya" aria-label="Telegram"><svg class="telegram-svg" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.8732 19.1268L35 1M16.8732 19.1268L20.8766 32.9564C21.4828 35.0508 24.4405 35.0785 25.0858 32.9957L35 1M16.8732 19.1268L3.04363 15.1235C0.949163 14.5172 0.921495 11.5595 3.00425 10.9142L35 1" stroke="current" stroke-width="1.09859"/>
+</svg></a>
+    </div>
+
+    <a href="#contacts" class="overlay__cta overlay__cta-mob black caps">Связаться</a>
+
+    <div class="container dowm-absolute" >
+      <div  style="text-align: center; color:#111; font-weight:800; letter-spacing:1.2; font-size:20px; width: 211px; margin: 0 auto;">
+        Pryobrazhenskaya Yulia
+      </div>
+       <img width="211px;" height="78px;" src="./images/header-photo.png" alt="Фотография шапки">
+
+    </div>
+  </div>
+
+  <!-- section hero -->
+
+  <section class="hero hero--desktop">
+  <div class="hero__container">
+    <!-- Левая часть -->
+    <div class="hero__left">
+      <h1 class="hero__title">ФОТОГРАФ</h1>
+
+      <div class="sublitle-wrapper">
+
+         <div class="hero__photo">
+        <img src="./images/hero-eye.jpg" alt="Глаз">
+      </div>
+           <div class="hero__subtitle">
+        <span class="hero__name">Приображенская Юлия</span>
+        <span class="hero__desc">О любви, свободе, творчестве</span>
+      </div>
+
+     
+      </div>
+   
+<div class="social-wrapper">
+    <div class="hero__social">
+      <div class="hero-social-relative">
+            <a href="https://www.instagram.com/pryobrazhenskaya?igsh=MWZkcnlpYXU4eHZqaw==" aria-label="Instagram" class="hero__icon"><svg class="inst" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.612903" y="0.612903" width="36.7742" height="36.7742" rx="9.19355" stroke="current" stroke-width="1.22581"/>
+<circle cx="19.0004" cy="18.9999" r="9.80645" stroke="current" stroke-width="1.22581"/>
+<circle cx="30.0323" cy="7.96784" r="2.45161" stroke="currwnt" stroke-width="1.22581"/>
+</svg>
+</a>
+        <a href="https://t.me/pryobrazhenskaya" aria-label="Telegram" class="hero__icon"><svg class="telegram-svg" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.8732 19.1268L35 1M16.8732 19.1268L20.8766 32.9564C21.4828 35.0508 24.4405 35.0785 25.0858 32.9957L35 1M16.8732 19.1268L3.04363 15.1235C0.949163 14.5172 0.921495 11.5595 3.00425 10.9142L35 1" stroke="current" stroke-width="1.09859"/>
+</svg>
+</a>
+      </div>
+    
+     
+      </div>
+
+      <a href="#contacts" class="hero__cta">Записаться</a>
+</div>
+    
+    </div>
+
+    <!-- Правая часть -->
+    <div class="hero__right">
+      <img class="round-el2" src="./images/main-photo-big.png" alt="Фотография — арт композиция">
+    </div>
+  </div>
+</section>
+
+<!-- Hero mobile -->
+<section class="hero hero--mobile">
+  <div class="hero__container">
+    <div class="hero__intro">
+      <span class="hero__label">фото&художник</span>
+      <h1 class="hero__name">Pryobrazhenskaya Yulia</h1>
+    </div>
+
+    <div class="hero__text">
+      <p>Моё искусство о любви, свободе и творчестве.</p>
+      <p>Здесь вы можете познакомиться с моей биографией, рассмотреть портфолио и почитать о глубине сюжетов.</p>
+    </div>
+
+    <div class="social-wrapper-mob"> 
+        <div class="hero__social">
+      <a href="https://www.instagram.com/pryobrazhenskaya?igsh=MWZkcnlpYXU4eHZqaw==" aria-label="Instagram">
+       <svg class="inst" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.612903" y="0.612903" width="36.7742" height="36.7742" rx="9.19355" stroke="current" stroke-width="1.22581"/>
+<circle cx="19.0004" cy="18.9999" r="9.80645" stroke="current" stroke-width="1.22581"/>
+<circle cx="30.0323" cy="7.96784" r="2.45161" stroke="currwnt" stroke-width="1.22581"/>
+</svg>
+      </a>
+      <a href="https://t.me/pryobrazhenskaya" aria-label="Telegram">
+     <svg class="telegram-svg" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.8732 19.1268L35 1M16.8732 19.1268L20.8766 32.9564C21.4828 35.0508 24.4405 35.0785 25.0858 32.9957L35 1M16.8732 19.1268L3.04363 15.1235C0.949163 14.5172 0.921495 11.5595 3.00425 10.9142L35 1" stroke="current" stroke-width="1.09859"/>
+</svg>
+      </a>
+    </div>
+
+    <div class="hero__image-mob">
+      <img class="round-el" width="375px"
+       src="./images/hero-mobile.png" alt="Арт-фото">
+    </div></div>
+
+ 
+  </div>
+</section>
+
+<section id="about" class="about">
+ 
+  <div class="grid">
+    <div class="box1 box">
+    
+    </div>
+    <div class="box2 box"> <h2 class="about-title">Обо мне</h2></div>
+    <div class="box3 box">Я снимаю женское тело и портрет. Отдельные работы раскрывают характеры и индивидуальность фотографируемых людей, но есть и те, где воплощаю свои идеи, используя женское тело, как пластилин и глину.</div>
+    <div class="box4 box"></div>
+    <div class="box5 box"><p>Меня зовут Юлия Приображенская, я родом из Украины.
+
+
+
+</p>
+
+<p>Всю свою осознанную жизнь я посвятила фотографии и живописи.</p>
+
+<p>Мой пик трансформации случился переехав на Бали в 20 лет. Тогда моя камера сломалась из-за повышенной влажности на острове, и я, находясь заграницей впервые, осталась одна без работы и денег.
+Это и был самый сильный толчок в моём творчестве: «Создавать не имея ничего».</p>
+
+</div>
+    <div class="box6 box"></div>
+    <div class="box7 box"><img width="535px" src="./images/about-main.jpg" alt="about Yuliia"></div>
+    <div class="box8 box"><img width="168px" src="./images/about1.jpg" alt="abot photographer from ukraine"></div>
+    <div class="box9 box"><img width="186" src="./images/about2.png" alt="art of yuliya"></div>
+    <!-- <div class="box10 box">10101010010110</div> -->
+  </div>
+</section>
+
+<section id="about2" class="about-mobile">
+  <div class="about-mobile__container">
+    
+    <h2 class="about-mobile__title">ОБО МНЕ</h2>
+    
+    <div class="about-mobile__text">
+      <p>Меня зовут Юлия Приображенская, я родилась в Украине, город Новая Каховка. Всю свою осознанную жизнь я посвятила фотографии и живописи.</p>
+      <p>Мой пик трансформации случился переехав на Бали в 20 лет. Тогда моя камера сломалась из-за повышенной влажности на острове, и я, находясь заграницей впервые, осталась одна без работы и денег.</p>
+      <p>Это и был самый сильный толчок в моём творчестве: «Создавать не имея ничего».</p>
+    </div>
+
+    <div class="about-mobile__photo">
+      <img width="450px" src="./images/about-mobile-main.jpg" alt="Фото Юлии с рамкой">
+    </div>
+
+    <div class="about-mobile__desc">
+      <p>Я снимаю женское тело и портрет. Отдельные работы раскрывают характеры и индивидуальность фотографируемых людей, но есть и те, где воплощаю свои идеи, используя женское тело, как глину.</p>
+    </div>
+
+    <div class="about-mobile__circles">
+      <img src="./images/about2.png" alt="">
+      <img src="./images/about-mobile2.jpg" alt="">
+      <img src="./images/about-mobile-3.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<section id="terms" class="quote-block">
+  <div class="quote-block__inner">
+      <span class="quote-mark">“</span>
+     <p class="quote-block__text top">
+    
+      Вдохновленная различием ценностей и культур, я борюсь с шаблонным восприятием женского тела. 
+      Хочу, чтоб вы по-новому, свежо взглянули на привычное
+    </p>
+
+
+    <!-- Изогнутая линия -->
+    <svg class="quote-block__line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" preserveAspectRatio="none">
+      <path d="M 50 150 C 200 50, 300 50, 450 150" stroke="white" stroke-width="2" fill="none"/>
+    </svg>
+
+  
+      <p class="quote-block__text bottom">
+      И, взглянув на мои работы, нашли ответ на вопрос: 
+      <span class="italic">“Что определяет красоту сегодня?”</span>
+    </p>
+  </div>
+</section>
+
+<section id="portfolio" class="portfolio">
+<h2 class="portfolio__title">Портфолио</h2>
+
+
+<div class="portfolio__tabs">
+<button class="tab is-active" data-tab="personal">Индивидуальные</button>
+<button class="tab" data-tab="brands">Коммерция</button>
+</div>
+
+
+<div class="portfolio__content">
+<div class="slider is-active" id="personal">
+<button class="slider__btn prev"><svg class="arrow-prev" width="15" height="30" viewBox="0 0 33 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32.6199 55.4942L0.873047 28.0006L32.6199 0.50708" stroke="current"/>
+</svg>
+</button>
+<div class="slider__track">
+<div class="slide"><img src="./images/portfolio/photo0.jpg" alt="Индивидуальная работа 0"></div>
+<div class="slide"><img src="./images/portfolio/photo1.jpg" alt="Индивидуальная работа 1"></div>
+<div class="slide"><img src="./images/portfolio/photo2.jpg" alt="Индивидуальная работа 2"></div>
+<div class="slide"><img src="./images/portfolio/photo3.jpg" alt="Индивидуальная работа 3"></div>
+<div class="slide"><img src="./images/portfolio/photo4.jpg" alt="Индивидуальная работа 4"></div>
+<div class="slide"><img src="./images/portfolio/photo5.jpg" alt="Индивидуальная работа 5"></div>
+<div class="slide"><img src="./images/portfolio/photo6.jpg" alt="Индивидуальная работа 6"></div>
+<div class="slide"><img src="./images/portfolio/photo7.jpg" alt="Индивидуальная работа 7"></div>
+<div class="slide"><img src="./images/portfolio/photo8.jpg" alt="Индивидуальная работа 8"></div>
+<div class="slide"><img src="./images/portfolio/photo9.jpg" alt="Индивидуальная работа 9"></div>
+<div class="slide"><img src="./images/portfolio/photo10.jpg" alt="Индивидуальная работа 10"></div>
+<div class="slide"><img src="./images/portfolio/photo11.jpg" alt="Индивидуальная работа 11"></div>
+</div>
+<button class="slider__btn next"><svg class="arrow-nexr" width="15" height="30" viewBox="0 0 33 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.380116 0.905669L32.127 27.9992L0.380119 55.4928" stroke="current"/>
+</svg>
+</button>
+</div>
+
+
+<div class="slider" id="brands">
+<button class="slider__btn prev"><svg class="arrow-prev" width="15" height="30" viewBox="0 0 33 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32.6199 55.4942L0.873047 28.0006L32.6199 0.50708" stroke="current"/>
+</svg></button>
+<div class="slider__track">
+<div class="slide"><img src="./images/portfolio/com0.jpg" alt="Коммерческая работа 0"></div>
+<div class="slide"><img src="./images/portfolio/com1.jpg" alt="Коммерческая работа 1"></div>
+<div class="slide"><img src="./images/portfolio/com2.jpg" alt="Коммерческая работа 2"></div>
+<div class="slide"><img src="./images/portfolio/com3.jpg" alt="Коммерческая работа 3"></div>
+<div class="slide"><img src="./images/portfolio/com4.jpg" alt="Коммерческая работа 4"></div>
+<div class="slide"><img src="./images/portfolio/com5.jpg" alt="Коммерческая работа 5"></div>
+<div class="slide"><img src="./images/portfolio/com6.jpg" alt="Коммерческая работа 6"></div>
+<div class="slide"><img src="./images/portfolio/com7.jpg" alt="Коммерческая работа 7"></div>
+<div class="slide"><img src="./images/portfolio/com8.jpg" alt="Коммерческая работа 8"></div>
+<div class="slide"><img src="./images/portfolio/com9.jpg" alt="Коммерческая работа 9"></div>
+</div>
+<button class="slider__btn next"><svg class="arrow-nexr" width="15" height="30" viewBox="0 0 33 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.380116 0.905669L32.127 27.9992L0.380119 55.4928" stroke="current"/>
+</svg></button>
+</div>
+</div>
+</section>
+
+<section id="prints" class="prints">
+  <div class="prints__inner">
+    <h2 class="prints__title">Принты</h2>
+    <p class="prints__text">
+      Есть возможность заказа принта, а также его оформление
+      в винтажную раму
+    </p>
+    <p class="prints__note mobile-only">
+      Примеры смотрите ниже.
+    </p>
+  </div>
+</section>
+
+<section class="prints-gallery desktop-only">
+  <div class="prints-gallery__grid">
+    <div class="prints-gallery__item">
+      <img src="./images/prints/frame1.jpg" alt="Принт 1">
+    </div>
+    <div class="prints-gallery__item">
+      <img class="destop-galery-photo-two" src="./images/prints/frame2.jpg" alt="Принт 2">
+    </div> 
+    <div class="prints-gallery__item">
+      <img src="./images/prints/frame3.jpg" alt="Принт 3">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="portfolio__content mobile-only">
+<div class="slider is-active" id="personal">
+<button class="slider__btn prev"><svg class="arrow-prev" width="15" height="30" viewBox="0 0 33 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32.6199 55.4942L0.873047 28.0006L32.6199 0.50708" stroke="current"/>
+</svg></button>
+<div class="slider__track">
+<div class="slide print"><img src="./images/prints/prin1.jpg" alt="Индивидуальная работа 0"></div>
+<div class="slide print"><img src="./images/prints/prin2.jpg" alt="Индивидуальная работа 1"></div>
+<div class="slide print"><img src="./images/prints/prin3.jpg" alt="Индивидуальная работа 2"></div>
+<div class="slide print"><img src="./images/prints/prin4.jpg" alt="Индивидуальная работа 3"></div>
+<div class="slide print"><img src="./images/prints/prin5.jpg" alt="Индивидуальная работа 4"></div>
+<div class="slide print"><img src="./images/prints/prin6.jpg" alt="Индивидуальная работа 5"></div>
+<div class="slide print"><img src="./images/prints/prin7.jpg" alt="Индивидуальная работа 6"></div>
+<div class="slide print"><img src="./images/prints/prin8.jpg" alt="Индивидуальная работа 7"></div>
+<div class="slide print"><img src="./images/prints/prin9.jpg" alt="Индивидуальная работа 8"></div>
+<div class="slide print"><img src="./images/prints/prin10.jpg" alt="Индивидуальная работа 9"></div>
+<div class="slide print"><img src="./images/prints/prin11.jpg" alt="Индивидуальная работа 10"></div>
+
+</div>
+<button class="slider__btn next"><svg class="arrow-nexr" width="15" height="30" viewBox="0 0 33 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.380116 0.905669L32.127 27.9992L0.380119 55.4928" stroke="current"/>
+</svg></button>
+</div>
+</section>
+
+
+<section id="certificate" class="certificate">
+  <!-- Общий блок: виден и на десктопе, и на мобилке -->
+  <div class="certificate__main">
+    <h2 class="certificate__title">СЕРТИФИКАТ</h2>
+    <p class="certificate__text">
+      Упакованный в конверт или письмо, которое вы<br>
+      напишете от руки и чистого сердца для получателя.
+    </p>
+  </div>
+
+  <!-- Только для мобилки: второй фон -->
+  <div class="certificate__mobile-bg"></div>
+</section>
+
+
+
+<section id="contacts" class="contact">
+  <div class="title-wraper">
+      <h2 class="contact__title">СВЯЗАТЬСЯ</h2>
+  </div>
+
+  <div class="contact-wrapper">
+
+    <div class="contact__left">
+
+<p class="contact__desc">
+Оставьте свои контактные данные и я свяжусь с вами, чтобы обсудить детали съемки
+</p>
+<p class="contact__note">Написать лично вы можете по координатам</p>
+<div class="contact__icons">
+  <a href="#"><svg  width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.8732 19.1268L35 1M16.8732 19.1268L20.8766 32.9564C21.4828 35.0508 24.4405 35.0785 25.0858 32.9957L35 1M16.8732 19.1268L3.04363 15.1235C0.949163 14.5172 0.921495 11.5595 3.00425 10.9142L35 1" stroke="current" stroke-width="1.09859"/>
+</svg></a>
+
+  <a href="#"><svg  width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.612903" y="0.612903" width="36.7742" height="36.7742" rx="9.19355" stroke="current" stroke-width="1.22581"/>
+<circle cx="19.0004" cy="18.9999" r="9.80645" stroke="current" stroke-width="1.22581"/>
+<circle cx="30.0323" cy="7.96784" r="2.45161" stroke="current" stroke-width="1.22581"/>
+</svg></a>
+
+
+</div>
+</div>
+
+<form class="contact__form" id="contact-form">
+  <input type="text" name="name" placeholder="Имя" class="contact__input" required>
+  <input type="tel" name="phone" placeholder="Номер телефона" class="contact__input" required>
+  <p id="form-message" style="display:none; color:green; margin-top:10px;">
+  ✅ Я получила вашу заявку, скоро свяжусь с вами!
+</p>
+  <button class="contact__btn" type="submit">ОТПРАВИТЬ</button>
+</form>
+
+
+
+<script>
+document.querySelector("#contact-form").addEventListener("submit", function(e) {
+  e.preventDefault(); // блокируем стандартный сабмит
+
+  fetch("https://formsubmit.co/ajax/ygaginazy@gmail.com", {
+    method: "POST",
+    body: new FormData(this)
+  })
+  .then(response => response.json())
+  .then(data => {
+    document.querySelector("#form-message").style.display = "block";
+    this.reset();
+  })
+  .catch(error => console.error("Ошибка:", error));
+});
+</script>
+
+<!-- <form class="contact__form">
+<input type="text" placeholder="Имя" class="contact__input" />
+<input type="tel" placeholder="Номер телефона" class="contact__input" />
+<button type="submit" class="contact__btn">ОТПРАВИТЬ</button>
+</form> -->
+  </div>
+
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="footer__nav desktop-only-footer">
+    <a href="#portfolio">ПОРТФОЛИО</a>
+    <a href="#about">ОБО МНЕ</a>
+    <a href="#prints">ПРИНТЫ</a>
+  </div>
+
+  <div class="footer__nav mobile-only">
+    <div class="footer__row first">
+      <a href="#portfolio">ПОРТФОЛИО</a>
+      <a href="#about">ОБО МНЕ</a>
+      <a href="#">ГЛАВНАЯ</a>
+    </div>
+    <div class="footer__row">
+      <a href="#certificate">СЕРТИФИКАТ</a>
+      <a class="print-a" href="#prints">ПРИНТЫ</a>
+      <a href="#contacts">СВЯЗАТЬСЯ</a>
+    </div>
+    <div class="footer__author">Pryobrazhenskaya Yulia</div>
+  </div>
+</footer>
+
+
+
+
+
+  <script src="./js/index.js"></script>
+</body>
+</html>
