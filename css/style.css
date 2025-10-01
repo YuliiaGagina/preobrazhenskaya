@@ -343,8 +343,8 @@ body {
 
 /* кнопка CTA */
 .overlay__cta {
-  width: 163px;
-  height: 163px;
+  width: 150px;
+  height: 150px;
   aspect-ratio: 1/1;
   border-radius: 999px;
   border: 1px solid #000000;
