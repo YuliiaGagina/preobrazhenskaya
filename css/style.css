@@ -1841,7 +1841,7 @@ height: 16px;
 .round-el2 {
   transform: scale(0.6);
   opacity: 0;
-  animation: fadeScaleIn 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fadeScaleIn 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
 }
 
 .round-el2 {
@@ -1850,21 +1850,15 @@ height: 16px;
 
 @keyframes fadeScaleIn {
   0% {
-    transform: scale(0.6);
+    transform: scale(0.8);
     opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  80% {
-    transform: scale(1.05);
-    opacity: 0.9;
   }
   100% {
     transform: scale(1);
     opacity: 1;
   }
 }
+
 
 
     /* Оверлей */
