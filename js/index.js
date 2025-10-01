@@ -1,4 +1,13 @@
 (function(){
+
+
+      window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("preloader").style.display = "none";
+        document.getElementById("main").style.display = "block";
+      }, 2000); // 2 секунды
+    });
+
   const burger = document.getElementById('burger');
   const menu = document.getElementById('mobileMenu');
   const closeBtn = menu.querySelector('.overlay__close');

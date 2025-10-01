@@ -1601,7 +1601,8 @@ padding: 12px 0;
 font-size: 18px;
 background: transparent;
 outline: none;
-
+  -webkit-appearance: none;
+  border-radius: 0; 
   
 
 
@@ -1862,3 +1863,41 @@ height: 16px;
     opacity: 1;
   }
 }
+
+
+    /* Оверлей */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000; /* Чёрный фон */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    /* Серый спиннер */
+    .loader {
+      border: 8px solid #333;       /* тёмно-серый круг */
+      border-top: 8px solid #aaa;   /* светло-серый верх */
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Контент по умолчанию скрыт */
+    #main {
+      display: none;
+     
+      
+    }
