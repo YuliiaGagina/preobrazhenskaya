@@ -1742,7 +1742,9 @@ height: 16px;
 @media (max-width: 425px){
       .contact__btn{
         right: 10px;
+        font-weight: 400;
         top: 60%;
+        font-size: 14px;
       }
 
 }
