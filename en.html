@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Header — photo layout</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="top-accent" aria-hidden="true"></div>
+
+  <header class="header" role="banner">
+    <div class="container header__row">
+      <div class="header__grid">
+        
+        <div class="brand">
+            <div class="header__location caps">Odesa, Ukraine</div>
+          <div class="header__photo">
+            <img src="./images/header-photo.png" alt="Header photo">
+          </div>
+        
+        </div>
+
+        <div class="write-header-part">
+               <div class="header__controls">
+          <div class="lang " aria-label="Language selection">
+            <a href="index.html" lang="ru">RU</a>
+            <a href="en.html" class="is-active" lang="en">EN</a>
+            <a href="ua.html" lang="uk">UA</a>
+          </div>
+
+        <nav class="nav" aria-label="Main menu">
+          <a href="#portfolio" class="caps">Portfolio</a>
+          <a href="#about" class="caps">About me</a>
+          <a href="#terms" class="caps">Terms</a>
+          <a href="#contacts" class="caps">Contacts</a>
+        </nav>
+        </div>
+    
+
+        <button class="burger" id="burger" aria-label="Open menu" aria-haspopup="dialog" aria-controls="mobileMenu">
+            <span class="burger__icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="current" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="12" y="20" width="40" height="1" rx="1"></rect>
+                <rect x="25" y="31" width="27" height="1" rx="1"></rect>
+                <rect x="18" y="42" width="34" height="1" rx="1"></rect>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <div class="overlay" id="mobileMenu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <button class="overlay__close" type="button" aria-label="Close menu"></button>
+
+    <div class="overlay__panel">
+      <a href="#home" class="caps">Home</a>
+      <a href="#about2" class="caps">About me</a>
+      <a href="#portfolio" class="caps">Portfolio</a>
+      <a href="#prints" class="caps">Prints</a>
+      <a href="#certificate" class="caps">Certificate</a>
+    </div>
+
+    <div class="overlay__social">
+      <a href="https://www.instagram.com/pryobrazhenskaya?igsh=MWZkcnlpYXU4eHZqaw==" aria-label="Instagram"> <svg class="inst" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.612903" y="0.612903" width="36.7742" height="36.7742" rx="9.19355" stroke="current" stroke-width="1.22581"/>
+<circle cx="19.0004" cy="18.9999" r="9.80645" stroke="current" stroke-width="1.22581"/>
+<circle cx="30.0323" cy="7.96784" r="2.45161" stroke="currwnt" stroke-width="1.22581"/>
+</svg></a>
+      <a href="https://t.me/pryobrazhenskaya" aria-label="Telegram"><svg class="telegram-svg" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.8732 19.1268L35 1M16.8732 19.1268L20.8766 32.9564C21.4828 35.0508 24.4405 35.0785 25.0858 32.9957L35 1M16.8732 19.1268L3.04363 15.1235C0.949163 14.5172 0.921495 11.5595 3.00425 10.9142L35 1" stroke="current" stroke-width="1.09859"/>
+</svg></a>
+    </div>
+
+    <a href="#contacts" class="overlay__cta overlay__cta-mob black caps">Get in touch</a>
+
+    <div class="container dowm-absolute" >
+      <div  style="text-align: center; color:#111; font-weight:800; letter-spacing:1.2; font-size:20px; width: 211px; margin: 0 auto;">
+        Pryobrazhenskaya Yulia
+      </div>
+       <img width="211px;" height="78px;" src="./images/header-photo.png" alt="Header photo">
+
+    </div>
+  </div>
+
+  <section class="hero hero--desktop">
+  <div class="hero__container">
+    <div class="hero__left">
+      <h1 class="hero__title en">PHOTOGRAPHER</h1>
+
+      <div class="sublitle-wrapper">
+
+         <div class="hero__photo">
+        <img src="./images/hero-eye.jpg" alt="Eye">
+      </div>
+           <div class="hero__subtitle">
+        <span class="hero__name">Pryobrazhenska Yulia</span>
+        <span class="hero__desc">About love, freedom, creativity</span>
+      </div>
+
+     
+      </div>
+   
+<div class="social-wrapper">
+    <div class="hero__social">
+      <div class="hero-social-relative">
+            <a href="https://www.instagram.com/pryobrazhenskaya?igsh=MWZkcnlpYXU4eHZqaw==" aria-label="Instagram" class="hero__icon"><svg class="inst" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.612903" y="0.612903" width="36.7742" height="36.7742" rx="9.19355" stroke="current" stroke-width="1.22581"/>
+<circle cx="19.0004" cy="18.9999" r="9.80645" stroke="current" stroke-width="1.22581"/>
+<circle cx="30.0323" cy="7.96784" r="2.45161" stroke="currwnt" stroke-width="1.22581"/>
+</svg>
+</a>
+        <a href="https://t.me/pryobrazhenskaya" aria-label="Telegram" class="hero__icon"><svg class="telegram-svg" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.8732 19.1268L35 1M16.8732 19.1268L20.8766 32.9564C21.4828 35.0508 24.4405 35.0785 25.0858 32.9957L35 1M16.8732 19.1268L3.04363 15.1235C0.949163 14.5172 0.921495 11.5595 3.00425 10.9142L35 1" stroke="current" stroke-width="1.09859"/>
+</svg>
+</a>
+      </div>
+    
+     
+      </div>
+
+      <a href="#contacts" class="hero__cta">Book a session</a>
+</div>
+    
+    </div>
+
+    <div class="hero__right en">
+      <img class="round-el2" src="./images/main-photo-big.png" alt="Photograph — art composition">
+    </div>
+  </div>
+</section>
+
+<section class="hero hero--mobile">
+  <div class="hero__container">
+    <div class="hero__intro">
+      <span class="hero__label">photo&artist</span>
+      <h1 class="hero__name">Pryobrazhenskaya Yulia</h1>
+    </div>
+
+    <div class="hero__text">
+      <p>My art is about love, freedom, and creativity.</p>
+      <p>Here you can learn about my biography, view my portfolio, and read about the depth of the subjects.</p>
+    </div>
+
+    <div class="social-wrapper-mob"> 
+        <div class="hero__social">
+      <a href="https://www.instagram.com/pryobrazhenskaya?igsh=MWZkcnlpYXU4eHZqaw==" aria-label="Instagram">
+       <svg class="inst" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.612903" y="0.612903" width="36.7742" height="36.7742" rx="9.19355" stroke="current" stroke-width="1.22581"/>
+<circle cx="19.0004" cy="18.9999" r="9.80645" stroke="current" stroke-width="1.22581"/>
+<circle cx="30.0323" cy="7.96784" r="2.45161" stroke="currwnt" stroke-width="1.22581"/>
+</svg>
+      </a>
+      <a href="https://t.me/pryobrazhenskaya" aria-label="Telegram">
+     <svg class="telegram-svg" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.8732 19.1268L35 1M16.8732 19.1268L20.8766 32.9564C21.4828 35.0508 24.4405 35.0785 25.0858 32.9957L35 1M16.8732 19.1268L3.04363 15.1235C0.949163 14.5172 0.921495 11.5595 3.00425 10.9142L35 1" stroke="current" stroke-width="1.09859"/>
+</svg>
+      </a>
+    </div>
+
+    <div class="hero__image-mob">
+      <img class="round-el" width="375px"
+       src="./images/hero-mobile.png" alt="Art photo">
+    </div></div>
+
+ 
+  </div>
+</section>
+
+<section id="about" class="about">
+ 
+  <div class="grid">
+    <div class="box1 box">
+    
+    </div>
+    <div class="box2 box"> <h2 class="about-title">About me</h2></div>
+    <div class="box3 box">I photograph the female body and portrait. Separate works reveal the characters and individuality of the people being photographed, but there are also those where I embody my own ideas, using the female body as plasticine and clay.</div>
+    <div class="box4 box"></div>
+    <div class="box5 box"><p>My name is Yulia Pryobrazhenska, I am from Ukraine.
+</p>
+
+<p>I have dedicated my entire conscious life to photography and painting.</p>
+
+<p>My peak of transformation happened when I moved to Bali at the age of 20. At that time, my camera broke due to the high humidity on the island, and being abroad for the first time, I was left alone without work or money.
+This was the strongest catalyst for my creativity: "Creating with nothing."</p>
+
+</div>
+    <div class="box6 box"></div>
+    <div class="box7 box"><img width="535px" src="./images/about-main.jpg" alt="about Yuliia"></div>
+    <div class="box8 box"><img width="168px" src="./images/about1.jpg" alt="about photographer from Ukraine"></div>
+    <div class="box9 box"><img width="186" src="./images/about2.png" alt="art of Yulia"></div>
+    </div>
+</section>
+
+<section id="about2" class="about-mobile">
+  <div class="about-mobile__container">
+    
+    <h2 class="about-mobile__title">ABOUT ME</h2>
+    
+    <div class="about-mobile__text">
+      <p>My name is Yulia Pryobrazhenska, I was born in Ukraine, in the city of Nova Kakhovka. I have dedicated my entire conscious life to photography and painting.</p>
+      <p>My peak of transformation happened when I moved to Bali at the age of 20. At that time, my camera broke due to the high humidity on the island, and being abroad for the first time, I was left alone without work or money.</p>
+      <p>This was the strongest catalyst for my creativity: "Creating with nothing."</p>
+    </div>
+
+    <div class="about-mobile__photo">
+      <img width="450px" src="./images/about-mobile-main.jpg" alt="Yulia's photo with a frame">
+    </div>
+
+    <div class="about-mobile__desc">
+      <p>I photograph the female body and portrait. Separate works reveal the characters and individuality of the people being photographed, but there are also those where I embody my ideas, using the female body as clay.</p>
+    </div>
+
+    <div class="about-mobile__circles">
+      <img src="./images/about2.png" alt="">
+      <img src="./images/about-mobile2.jpg" alt="">
+      <img src="./images/about-mobile-3.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<section id="terms" class="quote-block">
+  <div class="quote-block__inner">
+      <span class="quote-mark">“</span>
+     <p class="quote-block__text top">
+    
+      Inspired by the difference in values and cultures, I challenge the stereotypical perception of the female body. 
+      I want you to take a new, fresh look at the familiar.
+    </p>
+
+
+    <svg class="quote-block__line" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" preserveAspectRatio="none">
+      <path d="M 50 150 C 200 50, 300 50, 450 150" stroke="white" stroke-width="2" fill="none"/>
+    </svg>
+
+  
+      <p class="quote-block__text bottom">
+      And, by looking at my work, find the answer to the question: 
+      <span class="italic">“What defines beauty today?”</span>
+    </p>
+  </div>
+</section>
+
+<section id="portfolio" class="portfolio">
+<h2 class="portfolio__title">Portfolio</h2>
+
+
+<div class="portfolio__tabs">
+<button class="tab is-active" data-tab="personal">Personal</button>
+<button class="tab" data-tab="brands">Commercial</button>
+</div>
+
+
+<div class="portfolio__content">
+<div class="slider is-active" id="personal">
+<button class="slider__btn prev"><svg class="arrow-prev" width="15" height="30" viewBox="0 0 33 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32.6199 55.4942L0.873047 28.0006L32.6199 0.50708" stroke="current"/>
+</svg>
+</button>
+<div class="slider__track">
+<div class="slide"><img src="./images/portfolio/photo0.jpg" alt="Personal work 0"></div>
+<div class="slide"><img src="./images/portfolio/photo1.jpg" alt="Personal work 1"></div>
+<div class="slide"><img src="./images/portfolio/photo2.jpg" alt="Personal work 2"></div>
+<div class="slide"><img src="./images/portfolio/photo3.jpg" alt="Personal work 3"></div>
+<div class="slide"><img src="./images/portfolio/photo4.jpg" alt="Personal work 4"></div>
+<div class="slide"><img src="./images/portfolio/photo5.jpg" alt="Personal work 5"></div>
+<div class="slide"><img src="./images/portfolio/photo6.jpg" alt="Personal work 6"></div>
+<div class="slide"><img src="./images/portfolio/photo7.jpg" alt="Personal work 7"></div>
+<div class="slide"><img src="./images/portfolio/photo8.jpg" alt="Personal work 8"></div>
+<div class="slide"><img src="./images/portfolio/photo9.jpg" alt="Personal work 9"></div>
+<div class="slide"><img src="./images/portfolio/photo10.jpg" alt="Personal work 10"></div>
+<div class="slide"><img src="./images/portfolio/photo11.jpg" alt="Personal work 11"></div>
+</div>
+<button class="slider__btn next"><svg class="arrow-nexr" width="15" height="30" viewBox="0 0 33 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.380116 0.905669L32.127 27.9992L0.380119 55.4928" stroke="current"/>
+</svg>
+</button>
+</div>
+
+
+<div class="slider" id="brands">
+<button class="slider__btn prev"><svg class="arrow-prev" width="15" height="30" viewBox="0 0 33 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32.6199 55.4942L0.873047 28.0006L32.6199 0.50708" stroke="current"/>
+</svg></button>
+<div class="slider__track">
+<div class="slide"><img src="./images/portfolio/com0.jpg" alt="Commercial work 0"></div>
+<div class="slide"><img src="./images/portfolio/com1.jpg" alt="Commercial work 1"></div>
+<div class="slide"><img src="./images/portfolio/com2.jpg" alt="Commercial work 2"></div>
+<div class="slide"><img src="./images/portfolio/com3.jpg" alt="Commercial work 3"></div>
+<div class="slide"><img src="./images/portfolio/com4.jpg" alt="Commercial work 4"></div>
+<div class="slide"><img src="./images/portfolio/com5.jpg" alt="Commercial work 5"></div>
+<div class="slide"><img src="./images/portfolio/com6.jpg" alt="Commercial work 6"></div>
+<div class="slide"><img src="./images/portfolio/com7.jpg" alt="Commercial work 7"></div>
+<div class="slide"><img src="./images/portfolio/com8.jpg" alt="Commercial work 8"></div>
+<div class="slide"><img src="./images/portfolio/com9.jpg" alt="Commercial work 9"></div>
+</div>
+<button class="slider__btn next"><svg class="arrow-nexr" width="15" height="30" viewBox="0 0 33 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.380116 0.905669L32.127 27.9992L0.380119 55.4928" stroke="current"/>
+</svg></button>
+</div>
+</div>
+</section>
+
+<section id="prints" class="prints">
+  <div class="prints__inner">
+    <h2 class="prints__title">Prints</h2>
+    <p class="prints__text">
+      It is possible to order a print, as well as its framing
+      in a vintage frame.
+    </p>
+    <p class="prints__note mobile-only">
+      See examples below.
+    </p>
+  </div>
+</section>
+
+<section class="prints-gallery desktop-only">
+  <div class="prints-gallery__grid">
+    <div class="prints-gallery__item">
+      <img src="./images/prints/frame1.jpg" alt="Print 1">
+    </div>
+    <div class="prints-gallery__item">
+      <img class="destop-galery-photo-two" src="./images/prints/frame2.jpg" alt="Print 2">
+    </div> 
+    <div class="prints-gallery__item">
+      <img src="./images/prints/frame3.jpg" alt="Print 3">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="portfolio__content mobile-only">
+<div class="slider is-active" id="personal">
+<button class="slider__btn prev"><svg class="arrow-prev" width="15" height="30" viewBox="0 0 33 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32.6199 55.4942L0.873047 28.0006L32.6199 0.50708" stroke="current"/>
+</svg></button>
+<div class="slider__track">
+<div class="slide print"><img src="./images/prints/prin1.jpg" alt="Print 1"></div>
+<div class="slide print"><img src="./images/prints/prin2.jpg" alt="Print 2"></div>
+<div class="slide print"><img src="./images/prints/prin3.jpg" alt="Print 3"></div>
+<div class="slide print"><img src="./images/prints/prin4.jpg" alt="Print 4"></div>
+<div class="slide print"><img src="./images/prints/prin5.jpg" alt="Print 5"></div>
+<div class="slide print"><img src="./images/prints/prin6.jpg" alt="Print 6"></div>
+<div class="slide print"><img src="./images/prints/prin7.jpg" alt="Print 7"></div>
+<div class="slide print"><img src="./images/prints/prin8.jpg" alt="Print 8"></div>
+<div class="slide print"><img src="./images/prints/prin9.jpg" alt="Print 9"></div>
+<div class="slide print"><img src="./images/prints/prin10.jpg" alt="Print 10"></div>
+<div class="slide print"><img src="./images/prints/prin11.jpg" alt="Print 11"></div>
+
+</div>
+<button class="slider__btn next"><svg class="arrow-nexr" width="15" height="30" viewBox="0 0 33 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.380116 0.905669L32.127 27.9992L0.380119 55.4928" stroke="current"/>
+</svg></button>
+</div>
+</section>
+
+
+<section id="certificate" class="certificate">
+  <div class="certificate__main">
+    <h2 class="certificate__title">CERTIFICATE</h2>
+    <p class="certificate__text">
+      Packaged in an envelope or a letter that you<br>
+      will write by hand and from the bottom of your heart for the recipient.
+    </p>
+  </div>
+
+  <div class="certificate__mobile-bg"></div>
+</section>
+
+
+
+<section id="contacts" class="contact">
+  <div class="title-wraper">
+      <h2 class="contact__title">CONTACT</h2>
+  </div>
+
+  <div class="contact-wrapper">
+
+    <div class="contact__left">
+
+<p class="contact__desc">
+Leave your contact details and I will get in touch with you to discuss the details of the photoshoot.
+</p>
+<p class="contact__note">You can contact me directly using the links below</p>
+<div class="contact__icons">
+  <a href="https://t.me/pryobrazhenskaya"><svg  width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.8732 19.1268L35 1M16.8732 19.1268L20.8766 32.9564C21.4828 35.0508 24.4405 35.0785 25.0858 32.9957L35 1M16.8732 19.1268L3.04363 15.1235C0.949163 14.5172 0.921495 11.5595 3.00425 10.9142L35 1" stroke="current" stroke-width="1.09859"/>
+</svg></a>
+
+  <a href="https://www.instagram.com/pryobrazhenskaya?igsh=MWZkcnlpYXU4eHZqaw=="><svg  width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.612903" y="0.612903" width="36.7742" height="36.7742" rx="9.19355" stroke="current" stroke-width="1.22581"/>
+<circle cx="19.0004" cy="18.9999" r="9.80645" stroke="current" stroke-width="1.22581"/>
+<circle cx="30.0323" cy="7.96784" r="2.45161" stroke="current" stroke-width="1.22581"/>
+</svg></a>
+
+
+</div>
+</div>
+
+<form class="contact__form" id="contact-form">
+  <input type="text" name="name" placeholder="Name" class="contact__input" required>
+  <input type="tel" name="phone" placeholder="Phone number" class="contact__input" required>
+  <p id="form-message" style="display:none; color:green; margin-top:10px;">
+  ✅ I have received your request, I will contact you shortly!
+</p>
+  <button class="contact__btn" type="submit">SEND</button>
+</form>
+
+
+
+<script>
+document.querySelector("#contact-form").addEventListener("submit", function(e) {
+  e.preventDefault(); // блокируем стандартный сабмит
+
+  fetch("https://formsubmit.co/ajax/ygaginazy@gmail.com", {
+    method: "POST",
+    body: new FormData(this)
+  })
+  .then(response => response.json())
+  .then(data => {
+    document.querySelector("#form-message").style.display = "block";
+    this.reset();
+  })
+  .catch(error => console.error("Ошибка:", error));
+});
+</script>
+
+</div>
+
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="footer__nav desktop-only-footer">
+    <a href="#portfolio">PORTFOLIO</a>
+    <a href="#about">ABOUT ME</a>
+    <a href="#prints">PRINTS</a>
+  </div>
+
+  <div class="footer__nav mobile-only">
+    <div class="footer__row first">
+      <a href="#portfolio">PORTFOLIO</a>
+      <a href="#about2">ABOUT ME</a>
+      <a href="#">HOME</a>
+    </div>
+    <div class="footer__row">
+      <a href="#certificate">CERTIFICATE</a>
+      <a class="print-a" href="#prints">PRINTS</a>
+      <a href="#contacts">CONTACT</a>
+    </div>
+    <div class="footer__author">Pryobrazhenskaya Yulia</div>
+  </div>
+</footer>
+
+
+
+
+
+  <script src="./js/index.js"></script>
+</body>
+</html>

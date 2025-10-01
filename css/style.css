@@ -482,6 +482,9 @@ body {
   line-height: 112px;
   margin-left: 100px;
 }
+.hero__title.en{
+  font-size: 68px;
+}
 .sublitle-wrapper {
   display: flex;
   gap: 39px;
@@ -592,6 +595,9 @@ width: 240px;
   height: auto;
   object-fit: cover;
   transform: scale(1);
+}
+.hero__right.en img{
+   left: -60px;
 }
 .social-wrapper {
   display: grid;
@@ -1595,6 +1601,15 @@ padding: 12px 0;
 font-size: 18px;
 background: transparent;
 outline: none;
+
+  
+
+
+ 
+}
+
+.contact__input:focus {
+  border-bottom: 2px solid #333;
 }
 
 
