@@ -400,6 +400,9 @@
 <section id="contacts" class="contact">
   <div class="title-wraper">
       <h2 class="contact__title">СВЯЗАТЬСЯ</h2>
+      <div class="info-message">    <p id="form-message" style="display:none; color:green; margin-top:0px; ">
+  ✅ Я получила вашу заявку, скоро свяжусь с вами!
+</p></div>
   </div>
 
   <div class="contact-wrapper">
@@ -428,11 +431,15 @@
 <form class="contact__form" id="contact-form">
   <input type="text" name="name" placeholder="Имя" class="contact__input" required>
   <input type="tel" name="phone" placeholder="Номер телефона" class="contact__input" required>
-  <p id="form-message" style="display:none; color:green; margin-top:10px;">
-  ✅ Я получила вашу заявку, скоро свяжусь с вами!
-</p>
+ 
   <button class="contact__btn" type="submit">ОТПРАВИТЬ</button>
+
+
+ 
 </form>
+
+
+
 
 
 
@@ -440,7 +447,7 @@
 document.querySelector("#contact-form").addEventListener("submit", function(e) {
   e.preventDefault(); // блокируем стандартный сабмит
 
-  fetch("https://formsubmit.co/ajax/ygaginazy@gmail.com", {
+  fetch("https://formsubmit.co/ajax/0a37ea685a0e1d639266f2fc11bc1311", {
     method: "POST",
     body: new FormData(this)
   })
@@ -495,5 +502,6 @@ document.querySelector("#contact-form").addEventListener("submit", function(e) {
 
 
   <script src="./js/index.js"></script>
+  <script src="https://unpkg.com/imask"></script>
 </body>
 </html>

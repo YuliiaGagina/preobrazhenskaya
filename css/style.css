@@ -1013,7 +1013,7 @@ position: absolute;
 }
 
 /* ===== MOBILE VERSION ===== */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .quote-block {
     padding: 40px 20px 40px;
     min-height: auto;
@@ -1148,6 +1148,7 @@ position: absolute;
 .slider__track {
   display: flex;
   transition: transform 0.5s ease;
+  will-change: transform;
   width: 100%;
 }
 
@@ -1503,7 +1504,7 @@ padding-right: 40px;
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .certificate__main {
     background: url('../images/certificate-desktop.jpg') center center / cover no-repeat;
     height: 264px;
@@ -1699,7 +1700,7 @@ width: 100%;
 gap: 20px;
 position: relative;
 margin-bottom: 40px;
-margin-left: 0;
+
 }
 
 .contact__input{
@@ -1718,7 +1719,7 @@ position: absolute;
         right: 70px;
         left: auto;
         transform: translateY(-50%);
-        top: 40%;
+        top: 60%;
         width: 100px;
         height: 100px;
         font-size: 16px;
@@ -1895,5 +1896,9 @@ height: 16px;
     #main {
       display: none;
      
+      
+    }
+
+    .info-message{
       
     }

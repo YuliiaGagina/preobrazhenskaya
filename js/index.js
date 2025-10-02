@@ -1,12 +1,32 @@
 (function(){
 
+window.addEventListener("load", () => {
+  if (!sessionStorage.getItem("preloaderShown")) {
+    // Прелоадер показывается впервые
+    setTimeout(() => {
+      document.getElementById("preloader").style.display = "none";
+      document.getElementById("main").style.display = "block";
+      sessionStorage.setItem("preloaderShown", "true");
+    }, 2000); // 2 секунды
+  } else {
+    // Прелоадер уже показывался — скрываем сразу
+    document.getElementById("preloader").style.display = "none";
+    document.getElementById("main").style.display = "block";
+  }
+});
+  
 
-      window.addEventListener("load", () => {
-      setTimeout(() => {
-        document.getElementById("preloader").style.display = "none";
-        document.getElementById("main").style.display = "block";
-      }, 2000); // 2 секунды
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  const phoneInput = document.querySelector('input[name="phone"]');
+
+  const maskOptions = {
+    mask: '+{380} 00 000 0000',
+    lazy: false, // показывает +380 всегда
+    placeholderChar: '_',
+  };
+
+  IMask(phoneInput, maskOptions);
+});
 
   const burger = document.getElementById('burger');
   const menu = document.getElementById('mobileMenu');
@@ -62,95 +82,67 @@ panelLinks.forEach(link => {
 })();
 
 
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
-  const tabs = document.querySelectorAll(".tab");
   const sliders = document.querySelectorAll(".slider");
-
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      const target = tab.dataset.tab;
-
-      tabs.forEach(t => t.classList.remove("is-active"));
-      sliders.forEach(s => s.classList.remove("is-active"));
-
-      tab.classList.add("is-active");
-      document.getElementById(target).classList.add("is-active");
-    });
-  });
 
   sliders.forEach(slider => {
     const track = slider.querySelector(".slider__track");
-    const slides = slider.querySelectorAll(".slide");
+    const slides = Array.from(track.children);
     const prevBtn = slider.querySelector(".slider__btn.prev");
     const nextBtn = slider.querySelector(".slider__btn.next");
 
-    let index = 0;
-    let slideCount = slides.length;
+    let currentIndex = 0;
+    const totalSlides = slides.length;
 
-    // Clone for infinite
-    const first = slides[0].cloneNode(true);
-    const last = slides[slideCount - 1].cloneNode(true);
-    track.appendChild(first);
-    track.insertBefore(last, slides[0]);
-    const newSlides = slider.querySelectorAll(".slide");
-    let currentIndex = 1;
-
-    const update = (animate = true) => {
-      const width = slider.clientWidth;
-      if (!animate) track.style.transition = "none";
-      else track.style.transition = "transform 0.5s ease";
-      slideWidth = slider.clientWidth; 
-      track.style.transform = `translateX(-${width * currentIndex}px)`;
+    const setSlidePosition = () => {
+      const slideWidth = slides[0].offsetWidth;
+      track.style.transition = "transform 0.4s ease";
+      track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
     };
 
-    update(false);
-
     nextBtn.addEventListener("click", () => {
-      if (currentIndex < newSlides.length - 1) {
+      if (currentIndex < totalSlides - 1) {
         currentIndex++;
-        update();
-        if (currentIndex === newSlides.length - 1) {
-          setTimeout(() => {
-            currentIndex = 1;
-            update(false);
-          }, 500);
-        }
+        setSlidePosition();
       }
     });
 
     prevBtn.addEventListener("click", () => {
       if (currentIndex > 0) {
         currentIndex--;
-        update();
-        if (currentIndex === 0) {
-          setTimeout(() => {
-            currentIndex = slideCount;
-            update(false);
-          }, 500);
-        }
+        setSlidePosition();
       }
     });
 
-    // Swipe
+    // Swipe (мобильный)
     let startX = 0;
-    slider.addEventListener("touchstart", e => startX = e.touches[0].clientX);
+    slider.addEventListener("touchstart", e => {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+
     slider.addEventListener("touchend", e => {
-      const endX = e.changedTouches[0].clientX;
-      if (startX - endX > 50) nextBtn.click();
-      else if (endX - startX > 50) prevBtn.click();
+      const delta = startX - e.changedTouches[0].clientX;
+      if (delta > 50) nextBtn.click();
+      else if (delta < -50) prevBtn.click();
     });
 
-    window.addEventListener("resize", () => update(false));
+    window.addEventListener("resize", setSlidePosition);
+    setSlidePosition();
   });
 
+  // Табы (тоже не трогаем)
+  const tabs = document.querySelectorAll(".tab");
+  const slidersAll = document.querySelectorAll(".slider");
 
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const target = tab.dataset.tab;
 
+      tabs.forEach(t => t.classList.remove("is-active"));
+      slidersAll.forEach(s => s.classList.remove("is-active"));
 
-
-
-
+      tab.classList.add("is-active");
+      document.getElementById(target).classList.add("is-active");
+    });
+  });
 });
-
