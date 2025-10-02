@@ -1,17 +1,20 @@
 (function(){
 
 window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  const main = document.getElementById("main");
+
+  if (!preloader || !main) return; // если элементов нет — выйти
+
   if (!sessionStorage.getItem("preloaderShown")) {
-    // Прелоадер показывается впервые
     setTimeout(() => {
-      document.getElementById("preloader").style.display = "none";
-      document.getElementById("main").style.display = "block";
+      preloader.style.display = "none";
+      main.style.display = "block";
       sessionStorage.setItem("preloaderShown", "true");
-    }, 2000); // 2 секунды
+    }, 2000);
   } else {
-    // Прелоадер уже показывался — скрываем сразу
-    document.getElementById("preloader").style.display = "none";
-    document.getElementById("main").style.display = "block";
+    preloader.style.display = "none";
+    main.style.display = "block";
   }
 });
   
@@ -120,11 +123,15 @@ document.addEventListener("DOMContentLoaded", () => {
       startX = e.touches[0].clientX;
     }, { passive: true });
 
-    slider.addEventListener("touchend", e => {
-      const delta = startX - e.changedTouches[0].clientX;
-      if (delta > 50) nextBtn.click();
-      else if (delta < -50) prevBtn.click();
-    });
+  slider.addEventListener("touchend", e => {
+  const endX = e.changedTouches[0].clientX;
+  const delta = startX - endX;
+
+  if (Math.abs(delta) > 50) {
+    if (delta > 0) nextBtn.click(); // свайп влево
+    else prevBtn.click();           // свайп вправо
+  }
+});
 
     window.addEventListener("resize", setSlidePosition);
     setSlidePosition();
