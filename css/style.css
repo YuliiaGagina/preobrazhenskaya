@@ -1212,10 +1212,6 @@ stroke: black;
     font-size: 12px;
     width: 100%;
   }
-  .slide {
-  flex: 0 0 100%;
-  width: 100%;
-}
   .slider__btn {
     width: 40px;
     height: 40px;
@@ -1896,5 +1892,11 @@ height: 16px;
       }
     }
 
-  
+    /* Контент по умолчанию скрыт */
+    #main {
+      display: none;
+     
+      
+    }
+
   
