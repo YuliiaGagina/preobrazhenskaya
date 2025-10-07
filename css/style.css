@@ -1896,7 +1896,10 @@ height: 16px;
     #main {
       display: none;
      
-      
-    }
+      }
 
+    body.no-scroll {
+  overflow: hidden;
+  touch-action: none;
+}
   

@@ -95,7 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextBtn = slider.querySelector(".slider__btn.next");
 
     let currentIndex = 0;
-    const totalSlides = slides.length;
 
     const setSlidePosition = () => {
       const slideWidth = slides[0].offsetWidth;
@@ -104,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     nextBtn.addEventListener("click", () => {
-      if (currentIndex < totalSlides - 1) {
+      if (currentIndex < slides.length - 1) {
         currentIndex++;
         setSlidePosition();
       }
@@ -117,27 +116,47 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Swipe (мобильный)
+    // === SWIPE ===
     let startX = 0;
+    let startY = 0;
+    let isSwiping = false;
+
     slider.addEventListener("touchstart", e => {
       startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      isSwiping = true;
     }, { passive: true });
 
-  slider.addEventListener("touchend", e => {
-  const endX = e.changedTouches[0].clientX;
-  const delta = startX - endX;
+    slider.addEventListener("touchmove", e => {
+      if (!isSwiping) return;
+      const dx = e.touches[0].clientX - startX;
+      const dy = e.touches[0].clientY - startY;
 
-  if (Math.abs(delta) > 50) {
-    if (delta > 0) nextBtn.click(); // свайп влево
-    else prevBtn.click();           // свайп вправо
-  }
-});
+      if (Math.abs(dx) > Math.abs(dy)) {
+        // горизонтальный свайп
+        document.body.classList.add("no-scroll");
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    slider.addEventListener("touchend", e => {
+      const endX = e.changedTouches[0].clientX;
+      const delta = startX - endX;
+
+      if (Math.abs(delta) > 50) {
+        if (delta > 0) nextBtn.click();
+        else prevBtn.click();
+      }
+
+      document.body.classList.remove("no-scroll");
+      isSwiping = false;
+    });
 
     window.addEventListener("resize", setSlidePosition);
     setSlidePosition();
   });
 
-  // Табы (тоже не трогаем)
+  // === TABS ===
   const tabs = document.querySelectorAll(".tab");
   const slidersAll = document.querySelectorAll(".slider");
 
@@ -153,3 +172,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
