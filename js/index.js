@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextBtn = slider.querySelector(".slider__btn.next");
 
     let currentIndex = 0;
+    let isAnimating = false;
 
     const setSlidePosition = () => {
       const slideWidth = slides[0].offsetWidth;
@@ -102,18 +103,26 @@ document.addEventListener("DOMContentLoaded", () => {
       track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
     };
 
+    const goToSlide = (newIndex) => {
+      if (isAnimating) return;
+      if (newIndex < 0 || newIndex >= slides.length) return;
+
+      isAnimating = true;
+      currentIndex = newIndex;
+      setSlidePosition();
+
+      // Разблокировка после анимации
+      setTimeout(() => {
+        isAnimating = false;
+      }, 400);
+    };
+
     nextBtn.addEventListener("click", () => {
-      if (currentIndex < slides.length - 1) {
-        currentIndex++;
-        setSlidePosition();
-      }
+      goToSlide(currentIndex + 1);
     });
 
     prevBtn.addEventListener("click", () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        setSlidePosition();
-      }
+      goToSlide(currentIndex - 1);
     });
 
     // === SWIPE ===
@@ -133,7 +142,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const dy = e.touches[0].clientY - startY;
 
       if (Math.abs(dx) > Math.abs(dy)) {
-        // горизонтальный свайп
         document.body.classList.add("no-scroll");
         e.preventDefault();
       }
@@ -144,8 +152,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const delta = startX - endX;
 
       if (Math.abs(delta) > 50) {
-        if (delta > 0) nextBtn.click();
-        else prevBtn.click();
+        if (delta > 0) goToSlide(currentIndex + 1);
+        else goToSlide(currentIndex - 1);
       }
 
       document.body.classList.remove("no-scroll");
@@ -172,4 +180,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
