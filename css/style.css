@@ -1407,7 +1407,7 @@ body {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .desktop-only {
     display: none;
   }
@@ -1431,9 +1431,7 @@ body {
   .desktop-only {
     display: none;
   }
-  .mobile-only {
-    display: block;
-  }
+ 
 
   .slide.print {
     height: 459px;
