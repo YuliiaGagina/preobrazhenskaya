@@ -1279,9 +1279,7 @@ body {
   transform: scale(1.09);
 }
 
-.mobile-only {
-  display: none;
-}
+
 
 /* Мобильные стили */
 @media (max-width: 1023px) {
@@ -1403,9 +1401,7 @@ body {
   display: block;
   object-fit: cover;
 }
-.mobile-only {
-  display: none;
-}
+
 
 @media (max-width: 769px) {
   .desktop-only {
@@ -1757,9 +1753,13 @@ body {
   margin: 0 auto;
 }
 
-.mobile-only {
-  display: none;
-}
+
+
+  .mobile-only {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
 
 /* Media query for mobile */
 @media (max-width: 768px) {
@@ -1770,11 +1770,7 @@ body {
     display: none;
   }
 
-  .mobile-only {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
+
 
   .footer__nav a {
     font-size: 12px;
@@ -1860,4 +1856,10 @@ body {
 body.no-scroll {
   overflow: hidden;
   touch-action: none;
+}
+
+@media(min-width: 768px){
+  .mobile-only {
+    display: block !important;
+  }
 }
