@@ -1771,7 +1771,9 @@ body {
   }
 
   .mobile-only {
-    display: block;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   .footer__nav a {
