@@ -1568,7 +1568,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   flex-grow: 1;
-  max-width: 600px;
+  max-width: 480px;
   gap: 25px;
 }
 
@@ -1683,12 +1683,12 @@ body {
 
   .contact__btn {
     position: absolute;
-    right: 70px;
+    right: 60px;
     left: auto;
     transform: translateY(-50%);
     top: 60%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     font-size: 16px;
   }
 
